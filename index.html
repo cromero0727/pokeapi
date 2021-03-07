@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Desafio - Pokeapi</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+</head>
+
+<body class="body-document">
+    <nav class="navbar navbar-expand-sm navbar-dark justify-content-center">
+        <a class="navbar-brand" href=""><img class="logoPoke" src="/assets/images/pokeapilogo.png" alt="Logo_PokeApi"></a>
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
+
+    </nav>
+
+    <section class="consulta">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3>Escribe o selecciona tu Pokemón</h3>
+                    <div class="form group input_select">
+                        <input type="text" id="inputPoke">
+                        <button type="button" class="btn-buscar" id="btnBuscarInput">Buscar Pokemón</button>
+                        <select name="selectPoke" class="form-control" id="selectPoke"></select>
+                        <option value="" id="pokemonSeleccionado"></option>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="respuesta">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h4 id="nombrePokemon">Nombre Pokemón</h4>
+                    <div class="row">
+                        <div class="col-6">
+                            <div>
+                                <span class="etiqueta-dato">Pokedex:</span>
+                                <span id="pokeDex"></span>
+                            </div>
+                            <div>
+                                <span class="etiqueta-dato">Tipo:</span>
+                                <span id="tipo"></span>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div>
+                                <span class="etiqueta-dato">Habilidad:</span>
+                                <span id="habilidad"></span>
+                            </div>
+                            <div>
+                                <span class="etiqueta-dato">Peso</span>
+                                <span id="peso"></span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <img id="imgPoke1" class="img_pokemon" src="" alt="">
+                    <img id="imgPoke2" class="img_pokemon" src="" alt="">
+                </div>
+
+
+                <div class="col-lg-6">
+                    <h4 id="tituloEstadistica">Estadística</h4>
+                    <div class="row">
+
+                        <div class="col-6">
+
+                            <div>
+                                <span class="etiqueta-dato">Ataque:</span>
+                                <span id="ataque"></span>
+                            </div>
+                            <div>
+                                <span class="etiqueta-dato">Defensa:</span>
+                                <span id="defensa"></span>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div>
+                                <span class="etiqueta-dato">Velocidad:</span>
+                                <span id="velocidad"></span>
+                            </div>
+                            <div>
+                                <span class="etiqueta-dato">Puntos de Salud:</span class="etiqueta-dato">
+                                <span id="salud"></span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div>
+                        <h4 id="graficos">Gráfico</h4>
+                        <canvas id="myChart">
+                            
+                        </canvas>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        </div>
+    </section>
+
+
+
+
+    <script src="/assets/js/script.js "></script>
+</body>
+
+</html>
